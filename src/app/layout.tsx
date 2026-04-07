@@ -29,9 +29,6 @@ export default function RootLayout({
       <body className="font-body antialiased">
         <div className="relative min-h-svh w-full bg-gradient-to-br from-princess-pink-light via-princess-pink to-princess-purple">
           {children}
-          <footer className="absolute bottom-4 w-full text-center text-brand-text/60 text-sm">
-            <p>Quiz de Princesas — Feito com muito amor</p>
-          </footer>
         </div>
         <Toaster />
       </body>
