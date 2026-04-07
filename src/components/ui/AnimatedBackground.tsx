@@ -1,6 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
+
+const cloudProps = [
+  { width: 200, height: 60, top: "10%", duration: 35 },
+  { width: 150, height: 45, top: "25%", duration: 45 },
+  { width: 250, height: 70, top: "50%", duration: 30 },
+  { width: 180, height: 50, top: "70%", duration: 50 },
+  { width: 220, height: 65, top: "85%", duration: 40 },
+  { width: 120, height: 40, top: "5%", duration: 60 },
+];
 
 const Cloud = ({ style, duration }: { style: React.CSSProperties; duration: string }) => (
   <div
@@ -15,37 +23,47 @@ const Sparkle = ({ style, duration }: { style: React.CSSProperties; duration: st
       style={{
         ...style,
         animationDuration: duration,
-        width: `${Math.random() * 2.5 + 1}px`,
-        height: `${Math.random() * 2.5 + 1}px`,
       }}
     />
 );
 
 const AnimatedBackground = () => {
     const [isMounted, setIsMounted] = useState(false);
+    const [clouds, setClouds] = useState<any[]>([]);
+    const [sparkles, setSparkles] = useState<any[]>([]);
 
     useEffect(() => {
+        const generatedClouds = cloudProps.map((prop) => {
+            return {
+                style: {
+                    width: `${prop.width}px`,
+                    height: `${prop.height}px`,
+                    top: prop.top,
+                    left: `-${prop.width}px`,
+                    animationDelay: `${-Math.random() * prop.duration}s`,
+                },
+                duration: `${prop.duration}s`
+            };
+        });
+        setClouds(generatedClouds);
+
+        const generatedSparkles = Array.from({ length: 20 }).map(() => ({
+            style: {
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                width: `${Math.random() * 2.5 + 1}px`,
+                height: `${Math.random() * 2.5 + 1}px`,
+            },
+            duration: `${Math.random() * 3 + 2}s`
+        }));
+        setSparkles(generatedSparkles);
+
         setIsMounted(true);
     }, []);
 
-    if (!isMounted) return null;
-
-  const clouds = [
-    { style: { width: "200px", height: "60px", top: "10%", left: "-200px" }, duration: "35s" },
-    { style: { width: "150px", height: "45px", top: "25%", left: "-200px", animationDelay: "5s" }, duration: "45s" },
-    { style: { width: "250px", height: "70px", top: "50%", left: "-250px", animationDelay: "2s" }, duration: "30s" },
-    { style: { width: "180px", height: "50px", top: "70%", left: "-180px", animationDelay: "8s" }, duration: "50s" },
-    { style: { width: "220px", height: "65px", top: "85%", left: "-220px", animationDelay: "12s" }, duration: "40s" },
-    { style: { width: "120px", height: "40px", top: "5%", left: "-120px", animationDelay: "15s" }, duration: "60s" },
-  ];
-  
-  const sparkles = Array.from({ length: 20 }).map((_, i) => ({
-      style: {
-          top: `${Math.random() * 100}%`,
-          left: `${Math.random() * 100}%`,
-      },
-      duration: `${Math.random() * 3 + 2}s`
-  }));
+    if (!isMounted) {
+        return null;
+    }
 
   return (
     <div className="absolute inset-0 w-full h-full overflow-hidden z-0">

@@ -80,8 +80,8 @@ export default {
           to: { height: "0" },
         },
         "cloud-move": {
-          "0%": { transform: "translateX(-200px)" },
-          "100%": { transform: "translateX(100vw)" },
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(calc(100vw + 100%))" },
         },
         pulsate: {
           "0%, 100%": { transform: "scale(1)", opacity: "0.3" },
