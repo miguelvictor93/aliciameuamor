@@ -11,7 +11,7 @@ export default {
     extend: {
       fontFamily: {
         body: ["Quicksand", "sans-serif"],
-        headline: ["Cinzel Decorative", "serif"],
+        headline: ["Playfair Display", "serif"],
       },
       colors: {
         background: "hsl(var(--background))",
