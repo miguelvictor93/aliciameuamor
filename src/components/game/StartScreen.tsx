@@ -23,7 +23,7 @@ export function StartScreen({ onStart }: StartScreenProps) {
       </p>
       <Button
         onClick={onStart}
-        className="font-headline text-2xl h-16 px-10 rounded-full bg-button-bg border-2 border-brand-gold text-brand-text hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shadow-brand-gold/30 shadow-lg"
+        className="font-headline text-2xl h-16 px-10 rounded-full bg-button-bg border-4 border-brand-gold text-brand-text hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shadow-brand-gold/30 shadow-lg"
       >
         Começar Aventura
       </Button>

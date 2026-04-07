@@ -37,7 +37,7 @@ export function GoldenFrame({
           alt={`Imagem da princesa ${princessName}`}
           width={280}
           height={320}
-          className="object-cover w-full h-full rounded-lg border-2 border-brand-gold-darker/50"
+          className="object-cover w-full h-full rounded-lg border-4 border-brand-gold-darker/50"
           priority
         />
       </div>

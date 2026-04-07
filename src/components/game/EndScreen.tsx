@@ -45,7 +45,7 @@ export function EndScreen({ score, totalQuestions, onRestart }: EndScreenProps) 
   const { starCount, message } = getFeedback(score, totalQuestions);
 
   return (
-    <div className="text-center flex flex-col items-center gap-6 animate-fade-in-scale-up p-8 bg-button-bg/70 rounded-2xl border-2 border-brand-gold shadow-lg">
+    <div className="text-center flex flex-col items-center gap-6 animate-fade-in-scale-up p-8 bg-button-bg/70 rounded-2xl border-4 border-brand-gold shadow-lg">
       <Confetti active={true} />
       <h2 className="font-headline text-4xl text-brand-text">Fim da Aventura!</h2>
       <p className="text-xl text-brand-text-secondary">
@@ -63,7 +63,7 @@ export function EndScreen({ score, totalQuestions, onRestart }: EndScreenProps) 
       <p className="text-lg text-brand-text-secondary max-w-sm">{message}</p>
       <Button
         onClick={onRestart}
-        className="font-headline text-2xl h-16 px-10 rounded-full bg-button-bg border-2 border-brand-gold text-brand-text hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shadow-brand-gold/30 shadow-lg"
+        className="font-headline text-2xl h-16 px-10 rounded-full bg-button-bg border-4 border-brand-gold text-brand-text hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shadow-brand-gold/30 shadow-lg"
       >
         Jogar Novamente
       </Button>

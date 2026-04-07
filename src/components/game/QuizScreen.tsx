@@ -111,7 +111,7 @@ export function QuizScreen({ questions, onQuizEnd }: QuizScreenProps) {
             onClick={() => handleAnswerClick(option)}
             disabled={isAnswered}
             className={cn(
-              "h-auto min-h-12 p-3 text-base font-medium text-brand-text border-2 border-brand-gold shadow-md transition-all duration-300",
+              "h-auto min-h-12 p-3 text-base font-medium text-brand-text border-4 border-brand-gold shadow-md transition-all duration-300",
               getButtonClass(option)
             )}
           >
