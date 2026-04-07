@@ -8,9 +8,6 @@ import { questions as allQuestions } from "@/lib/questions";
 import { shuffle } from "@/lib/utils";
 import type { QuizQuestion } from "@/types";
 import AnimatedBackground from "@/components/ui/AnimatedBackground";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { WandSparkles } from "lucide-react";
 
 type GameState = "start" | "playing" | "end";
 
@@ -57,14 +54,6 @@ export default function Home() {
             onRestart={restartGame}
           />
         )}
-      </div>
-      <div className="absolute top-4 right-4 z-20">
-        <Button asChild variant="ghost" className="text-brand-text hover:bg-white/30 hover:text-brand-text">
-            <Link href="/admin/generate-question">
-                <WandSparkles className="mr-2 h-4 w-4" />
-                Gerar Pergunta com IA
-            </Link>
-        </Button>
       </div>
     </main>
   );

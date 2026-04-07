@@ -125,12 +125,12 @@ export function QuizScreen({ questions, onQuizEnd }: QuizScreenProps) {
           {selectedAnswer === currentQuestion.correct ? (
             <>
               <CheckCircle className="text-green-600" />
-              <span className="text-brand-gold-darker">🌟 Muito bem! Você acertou!</span>
+              <span className="text-brand-gold-darker">Muito bem! Você acertou!</span>
             </>
           ) : (
             <>
               <XCircle className="text-red-600" />
-              <span className="text-brand-text-secondary">💔 Ops! A resposta era {currentQuestion.correct}</span>
+              <span className="text-brand-text-secondary">Ops! A resposta era {currentQuestion.correct}</span>
             </>
           )}
         </div>

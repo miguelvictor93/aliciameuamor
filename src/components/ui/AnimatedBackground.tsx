@@ -11,11 +11,14 @@ const Cloud = ({ style, duration }: { style: React.CSSProperties; duration: stri
 
 const Sparkle = ({ style, duration }: { style: React.CSSProperties; duration: string }) => (
     <div
-      className="absolute text-brand-gold-light animate-twinkle text-2xl"
-      style={{ ...style, animationDuration: duration }}
-    >
-      ✨
-    </div>
+      className="absolute bg-white/90 rounded-full animate-twinkle"
+      style={{
+        ...style,
+        animationDuration: duration,
+        width: `${Math.random() * 2.5 + 1}px`,
+        height: `${Math.random() * 2.5 + 1}px`,
+      }}
+    />
 );
 
 const AnimatedBackground = () => {
@@ -36,13 +39,12 @@ const AnimatedBackground = () => {
     { style: { width: "120px", height: "40px", top: "5%", left: "-120px", animationDelay: "15s" }, duration: "60s" },
   ];
   
-  const sparkles = Array.from({ length: 15 }).map((_, i) => ({
+  const sparkles = Array.from({ length: 20 }).map((_, i) => ({
       style: {
           top: `${Math.random() * 100}%`,
           left: `${Math.random() * 100}%`,
-          transform: `scale(${Math.random() * 0.5 + 0.5})`,
       },
-      duration: `${Math.random() * 2 + 3}s`
+      duration: `${Math.random() * 3 + 2}s`
   }));
 
   return (
