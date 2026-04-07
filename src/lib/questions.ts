@@ -59,7 +59,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     princess: "Mérida",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/en/4/4d/Brave_Poster.jpg",
+    imageUrl: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZ_WhnLiqBO_UTOVyWmh247N5_TdyzjbZ9iJzM0AxVF5xi5HnOqVSq7st_MEL0wUkH4fE8XF-0Pi2rc1D8RQbDG7oCjeAD7y9uN0cxzOfIlAYnsnauqEDmSJ7x4JKyq_qEWQSamFxPt1g/s1600/Brave-brave-31209519-1035-822.jpg",
     question: "Qual princesa escocesa é habilidosa com arco e flecha e transforma sua mãe em ursa?",
     options: ["Mérida", "Mulan", "Pocahontas", "Bela"],
     correct: "Mérida"
