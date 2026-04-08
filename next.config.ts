@@ -39,6 +39,12 @@ const nextConfig: NextConfig = {
         hostname: 'blogger.googleusercontent.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'd2bsjm9patfdz0.cloudfront.net',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

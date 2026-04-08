@@ -24,7 +24,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     princess: "Jasmine",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/en/e/e2/Aladdin_%281992_film%29_poster.jpg",
+    imageUrl: "https://d2bsjm9patfdz0.cloudfront.net/images/0000549_jasmine.png",
     question: "Qual princesa mora em Agrabah e sonha em ser livre pelo mundo?",
     options: ["Jasmine", "Rapunzel", "Mulan", "Tiana"],
     correct: "Jasmine"
