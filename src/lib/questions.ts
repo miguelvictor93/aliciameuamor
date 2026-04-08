@@ -32,7 +32,7 @@ export const questions: QuizQuestion[] = [
   {
     princess: "???",
     imageUrl: "https://preview.redd.it/did-you-know-typing-this-one-symbol-in-text-chat-makes-v0-v57n9xlcf52g1.jpeg?auto=webp&s=f157aa940184a93194deb909f89a1c1129e5aab7",
-    question: "De um reino de gelo e neve, qual princesa tem o poder de criar o inverno?",
+    question: "Dizem que a beleza dela encanta o mundo inteiro. Qual é a princesa mais deslumbrante de todas?",
     options: ["Ariel", "Moana", "Elsa", "Alicia"],
     correct: "Alicia",
     isSpecial: true,
