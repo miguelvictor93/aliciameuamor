@@ -36,7 +36,7 @@ export const questions: QuizQuestion[] = [
     options: ["Ariel", "Moana", "Elsa", "Pocahontas"],
     correct: "Alicia",
     isSpecial: true,
-    specialImageUrl: "https://i.imgur.com/6FkJgKQ.jpeg",
+    specialImageUrl: "https://i.imgur.com/MLqEJYR.jpeg",
     specialPrincessName: "A princesa mais linda de todas é você!"
   }
 ];
