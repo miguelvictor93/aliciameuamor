@@ -31,7 +31,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     princess: "???",
-    imageUrl: "https://png.pngtree.com/png-vector/20190508/ourmid/pngtree-vector-question-mark-icon-png-image_1028353.jpg",
+    imageUrl: "https://i.imgur.com/1E4sJ4n.png",
     question: "De um reino de gelo e neve, qual princesa tem o poder de criar o inverno?",
     options: ["Ariel", "Moana", "Elsa", "Alicia"],
     correct: "Alicia",
