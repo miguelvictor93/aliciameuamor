@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Confetti } from "../ui/Confetti";
 import { Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -46,7 +45,6 @@ export function EndScreen({ score, totalQuestions, onRestart }: EndScreenProps) 
 
   return (
     <div className="text-center flex flex-col items-center gap-6 animate-fade-in-scale-up p-8 bg-button-bg/70 rounded-2xl border-4 border-brand-gold shadow-lg">
-      <Confetti active={true} />
       <h2 className="font-headline text-4xl text-brand-text">Fim da Aventura!</h2>
       <p className="text-xl text-brand-text-secondary">
         Você acertou{" "}

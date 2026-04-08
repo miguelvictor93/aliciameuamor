@@ -6,7 +6,6 @@ import { shuffle } from "@/lib/utils";
 import { GoldenFrame } from "@/components/ui/GoldenFrame";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Confetti } from "@/components/ui/Confetti";
 import { CheckCircle, XCircle } from "lucide-react";
 
 interface QuizScreenProps {
@@ -84,7 +83,6 @@ export function QuizScreen({ questions, onQuizEnd }: QuizScreenProps) {
 
   return (
     <div className={cn("flex flex-col items-center gap-4 md:gap-6 w-full animate-fade-in-scale-up", isAnimatingOut && "animate-fade-out-scale-down")}>
-      <Confetti active={isAnswered && selectedAnswer === currentQuestion.correct} />
       
       <div className="w-full flex flex-col gap-2 text-brand-text">
         <div className="flex justify-center items-center font-semibold">
