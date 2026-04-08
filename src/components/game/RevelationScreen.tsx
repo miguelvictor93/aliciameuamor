@@ -34,23 +34,19 @@ export function RevelationScreen({ imageUrl, princessName }: RevelationScreenPro
     })), []);
 
   return (
-    <div className="relative text-center flex flex-col items-center gap-6 animate-fade-in-scale-up p-4 md:p-8 w-full h-full">
+    <div className="relative text-center flex flex-col items-center justify-center gap-4 p-4 md:p-8 w-full min-h-[500px] animate-fade-in-scale-up">
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-20">
         {hearts.map((heart, i) => <FloatingHeart key={i} {...heart} />)}
       </div>
 
-      <h1 className="font-headline text-5xl md:text-7xl text-brand-text drop-shadow-lg z-10">
-        Parabéns!
-      </h1>
-      
       <GoldenFrame
         imageUrl={imageUrl}
-        princessName={princessName}
+        princessName="Você!"
         className="w-full max-w-[280px] h-[320px] md:max-w-[320px] md:h-[360px] z-10"
       />
 
-       <p className="font-headline text-2xl md:text-4xl text-brand-text-secondary mt-4 z-10">
-        Você encontrou a princesa secreta!
+       <p className="font-headline text-3xl md:text-4xl text-brand-text mt-6 z-10 text-center max-w-md">
+        {princessName}
       </p>
 
     </div>

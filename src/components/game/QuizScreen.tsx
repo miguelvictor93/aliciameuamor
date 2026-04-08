@@ -55,24 +55,22 @@ export function QuizScreen({ questions, onQuizEnd }: QuizScreenProps) {
     setIsAnswered(true);
     setSelectedAnswer(option);
 
-    if (isCorrect) {
-      if (!currentQuestion.isSpecial) {
+    if (currentQuestion.isSpecial) {
+      // For the special question, always show the revelation screen after a short delay.
+      // The "wrong" feedback will be displayed because `isCorrect` will be false.
+      setTimeout(() => {
+        setRevelationMode(true);
+      }, 1500);
+    } else {
+      // Regular question logic
+      if (isCorrect) {
         setScore((prev) => prev + 1);
       }
-    }
-
-    if (currentQuestion.isSpecial && isCorrect) {
-      // Trigger revelation
       setTimeout(() => {
-          setRevelationMode(true);
-      }, 500);
-    } else {
-      // Regular question logic or wrong answer on special question
-      setTimeout(() => {
-          setIsAnimatingOut(true);
+        setIsAnimatingOut(true);
       }, 1500);
       setTimeout(() => {
-          handleNextQuestion();
+        handleNextQuestion();
       }, 1900); // 1500ms for feedback + 400ms for fade out
     }
   };

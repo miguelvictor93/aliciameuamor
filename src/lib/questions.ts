@@ -33,10 +33,10 @@ export const questions: QuizQuestion[] = [
     princess: "???",
     imageUrl: "https://preview.redd.it/did-you-know-typing-this-one-symbol-in-text-chat-makes-v0-v57n9xlcf52g1.jpeg?auto=webp&s=f157aa940184a93194deb909f89a1c1129e5aab7",
     question: "Todos dizem que ela é a mais perfeita e maravilhosa de todas as princesas. De quem estamos falando?",
-    options: ["Ariel", "Moana", "Elsa", "Alicia"],
+    options: ["Ariel", "Moana", "Elsa", "Pocahontas"],
     correct: "Alicia",
     isSpecial: true,
     specialImageUrl: "https://i.imgur.com/6FkJgKQ.jpeg",
-    specialPrincessName: "Alicia"
+    specialPrincessName: "A princesa mais linda de todas é você!"
   }
 ];
