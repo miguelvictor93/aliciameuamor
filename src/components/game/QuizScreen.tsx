@@ -15,7 +15,7 @@ interface QuizScreenProps {
 }
 
 const ProgressBar = ({ current, total }: { current: number; total: number }) => (
-  <div className="w-full h-4 bg-button-bg/50 rounded-full border border-brand-gold/30 overflow-hidden">
+  <div className="w-full h-4 bg-button-bg/50 rounded-full border-2 border-brand-gold/30 overflow-hidden">
     <div
       className="h-full bg-brand-gold rounded-full transition-all duration-500 ease-out"
       style={{ width: `${(current / total) * 100}%` }}
@@ -87,9 +87,8 @@ export function QuizScreen({ questions, onQuizEnd }: QuizScreenProps) {
       <Confetti active={isAnswered && selectedAnswer === currentQuestion.correct} />
       
       <div className="w-full flex flex-col gap-2 text-brand-text">
-        <div className="flex justify-between items-center font-semibold">
+        <div className="flex justify-center items-center font-semibold">
           <span>Questão {currentIndex + 1}/{questions.length}</span>
-          <span>Pontuação: {score}</span>
         </div>
         <ProgressBar current={currentIndex + 1} total={questions.length} />
       </div>
