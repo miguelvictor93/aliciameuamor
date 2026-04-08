@@ -3,7 +3,7 @@ import type { QuizQuestion } from '@/types';
 export const questions: QuizQuestion[] = [
   {
     princess: "Cinderela",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/en/1/12/Cinderella_%282015_film%29_poster.jpg",
+    imageUrl: "https://rihappy.vtexassets.com/arquivos/ids/7269332-800-auto?v=638733286723630000&width=800&height=auto&aspect=true",
     question: "Qual princesa perdeu seu sapatinho de cristal na festa do reino?",
     options: ["Branca de Neve", "Cinderela", "Aurora", "Bela"],
     correct: "Cinderela"

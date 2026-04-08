@@ -51,6 +51,12 @@ const nextConfig: NextConfig = {
         hostname: 'preview.redd.it',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'rihappy.vtexassets.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
