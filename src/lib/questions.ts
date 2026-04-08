@@ -24,7 +24,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     princess: "Mérida",
-    imageUrl: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZ_WhnLiqBO_UTOVyWmh247N5_TdyzjbZ9iJzM0AxVF5xi5HnOqVSq7st_MEL0wUkH4fE8XF-0Pi2rc1D8RQbDG7oCjeAD7y9uN0cxzOfIlAYnsnauqEDmSJ7x4JKyq_qEWQSamFxPt1g/s1600/Brave-brave-31209519-1035-822.jpg",
+    imageUrl: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZ_WhnLiqBO_UTOVyWmh247N5_TdyzjbZ9iJzM0AxVF5xi5HnOqVSq7st_MEL0wUkH4fE8XF-0Pi2rc1D8RQbDG7oCjeAD7y9uN0cxzOfIlAYnsnauqEDmSJ7x4JKyq_qEWQSamFxPt1g/s1600/Brave-brave-312095-1035-822.jpg",
     question: "Qual princesa escocesa é habilidosa com arco e flecha e transforma sua mãe em ursa?",
     options: ["Mérida", "Mulan", "Pocahontas", "Bela"],
     correct: "Mérida"
@@ -32,9 +32,9 @@ export const questions: QuizQuestion[] = [
   {
     princess: "???",
     imageUrl: "https://placehold.co/600x400/FFF0F8/7B3F6E?text=?",
-    question: "Qual princesa tem um galã ruivo secretamente apaixonado por ela?",
-    options: ["Tiana", "Pocahontas", "Rapunzel", "Alicia, meu amor"],
-    correct: "Alicia, meu amor",
+    question: "Qual princesa misteriosa você acha que está escondida atrás do '?'?",
+    options: ["Ariel", "Moana", "Elsa", "Alicia"],
+    correct: "Alicia",
     isSpecial: true,
     specialImageUrl: "https://i.imgur.com/6FkJgKQ.jpeg",
     specialPrincessName: "Alicia"
