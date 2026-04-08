@@ -45,6 +45,12 @@ const nextConfig: NextConfig = {
         hostname: 'd2bsjm9patfdz0.cloudfront.net',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'preview.redd.it',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

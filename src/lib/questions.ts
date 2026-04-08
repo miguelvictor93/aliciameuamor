@@ -17,7 +17,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     princess: "Bela",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/en/a/a2/Beauty_and_the_Beast_%282017%29_poster.jpg",
+    imageUrl: "https://preview.redd.it/to-me-belle-is-the-prettiest-disney-princess-v0-av307gktktme1.jpeg?width=640&crop=smart&auto=webp&s=b7bf3a1d623cd08d51576f4e104736125fe42fc4",
     question: "Qual princesa é conhecida por seu amor pelos livros e se tornou amiga de uma fera?",
     options: ["Jasmine", "Mérida", "Bela", "Pocahontas"],
     correct: "Bela"
