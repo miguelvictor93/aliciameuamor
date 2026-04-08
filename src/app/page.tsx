@@ -17,7 +17,16 @@ export default function Home() {
   const [shuffledQuestions, setShuffledQuestions] = useState<QuizQuestion[]>([]);
 
   const startGame = useCallback(() => {
-    setShuffledQuestions(shuffle([...allQuestions]));
+    const specialQuestion = allQuestions.find(q => q.isSpecial);
+    const regularQuestions = allQuestions.filter(q => !q.isSpecial);
+    const shuffledRegular = shuffle([...regularQuestions]);
+    
+    const finalQuestions = [...shuffledRegular];
+    if (specialQuestion) {
+      finalQuestions.push(specialQuestion);
+    }
+
+    setShuffledQuestions(finalQuestions);
     setScore(0);
     setGameState("playing");
   }, []);
@@ -36,8 +45,14 @@ export default function Home() {
     allQuestions.forEach((q) => {
       const img = new Image();
       img.src = q.imageUrl;
+      if (q.specialImageUrl) {
+        const specialImg = new Image();
+        specialImg.src = q.specialImageUrl;
+      }
     });
   }, []);
+
+  const totalRegularQuestions = allQuestions.filter(q => !q.isSpecial).length;
 
   return (
     <main className="relative flex min-h-svh flex-col items-center justify-center p-4 overflow-hidden">
@@ -50,7 +65,7 @@ export default function Home() {
         {gameState === "end" && (
           <EndScreen
             score={score}
-            totalQuestions={shuffledQuestions.length}
+            totalQuestions={totalRegularQuestions}
             onRestart={restartGame}
           />
         )}

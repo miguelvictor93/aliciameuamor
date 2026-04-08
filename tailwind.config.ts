@@ -115,10 +115,6 @@ export default {
           "0%": { opacity: "1", transform: "scale(1)" },
           "100%": { opacity: "0", transform: "scale(0.9)" },
         },
-        fall: {
-            '0%': { transform: 'translateY(-10vh) rotate(0deg)', opacity: '1' },
-            '100%': { transform: 'translateY(110vh) rotate(720deg)', opacity: '0' },
-        },
         'float-up': {
             '0%': { transform: 'translateY(0) scale(0.8)', opacity: '1' },
             '100%': { transform: 'translateY(-150px) scale(1.2)', opacity: '0' },
@@ -135,7 +131,6 @@ export default {
         shimmer: "shimmer 3s linear infinite",
         "fade-in-scale-up": "fade-in-scale-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         "fade-out-scale-down": "fade-out-scale-down 0.4s cubic-bezier(0.7, 0, 0.84, 0) forwards",
-        fall: 'fall 3s linear forwards',
         'float-up': 'float-up 1.5s ease-out forwards',
       },
       boxShadow: {

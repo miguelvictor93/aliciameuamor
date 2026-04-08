@@ -28,5 +28,15 @@ export const questions: QuizQuestion[] = [
     question: "Qual princesa escocesa é habilidosa com arco e flecha e transforma sua mãe em ursa?",
     options: ["Mérida", "Mulan", "Pocahontas", "Bela"],
     correct: "Mérida"
+  },
+  {
+    princess: "???",
+    imageUrl: "https://placehold.co/600x400/FFF0F8/7B3F6E?text=?",
+    question: "Qual princesa tem um galã ruivo secretamente apaixonado por ela?",
+    options: ["Tiana", "Pocahontas", "Rapunzel", "Alicia, meu amor"],
+    correct: "Alicia, meu amor",
+    isSpecial: true,
+    specialImageUrl: "https://i.imgur.com/6FkJgKQ.jpeg",
+    specialPrincessName: "Alicia"
   }
 ];

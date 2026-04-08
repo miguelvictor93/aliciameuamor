@@ -57,7 +57,13 @@ const nextConfig: NextConfig = {
         hostname: 'rihappy.vtexassets.com',
         port: '',
         pathname: '/**',
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.imgur.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };

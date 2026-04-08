@@ -1,12 +1,13 @@
 "use client";
 
-import { useState, useEffect, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback } from "react";
 import type { QuizQuestion } from "@/types";
 import { shuffle } from "@/lib/utils";
 import { GoldenFrame } from "@/components/ui/GoldenFrame";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { CheckCircle, XCircle } from "lucide-react";
+import { RevelationScreen } from "./RevelationScreen";
 
 interface QuizScreenProps {
   questions: QuizQuestion[];
@@ -28,6 +29,7 @@ export function QuizScreen({ questions, onQuizEnd }: QuizScreenProps) {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [isAnimatingOut, setIsAnimatingOut] = useState(false);
+  const [revelationMode, setRevelationMode] = useState(false);
 
   const currentQuestion = useMemo(() => questions[currentIndex], [questions, currentIndex]);
   const shuffledOptions = useMemo(() => {
@@ -49,19 +51,30 @@ export function QuizScreen({ questions, onQuizEnd }: QuizScreenProps) {
   const handleAnswerClick = (option: string) => {
     if (isAnswered) return;
 
+    const isCorrect = option === currentQuestion.correct;
     setIsAnswered(true);
     setSelectedAnswer(option);
 
-    if (option === currentQuestion.correct) {
-      setScore((prev) => prev + 1);
+    if (isCorrect) {
+      if (!currentQuestion.isSpecial) {
+        setScore((prev) => prev + 1);
+      }
     }
 
-    setTimeout(() => {
-        setIsAnimatingOut(true);
-    }, 1500);
-    setTimeout(() => {
-        handleNextQuestion();
-    }, 1900); // 1500ms for feedback + 400ms for fade out
+    if (currentQuestion.isSpecial && isCorrect) {
+      // Trigger revelation
+      setTimeout(() => {
+          setRevelationMode(true);
+      }, 500);
+    } else {
+      // Regular question logic or wrong answer on special question
+      setTimeout(() => {
+          setIsAnimatingOut(true);
+      }, 1500);
+      setTimeout(() => {
+          handleNextQuestion();
+      }, 1900); // 1500ms for feedback + 400ms for fade out
+    }
   };
   
   const getButtonClass = (option: string) => {
@@ -77,6 +90,15 @@ export function QuizScreen({ questions, onQuizEnd }: QuizScreenProps) {
     return "bg-button-bg/50 opacity-70";
   };
   
+  if (revelationMode && currentQuestion.isSpecial) {
+    return (
+      <RevelationScreen 
+        imageUrl={currentQuestion.specialImageUrl!}
+        princessName={currentQuestion.specialPrincessName!}
+      />
+    );
+  }
+
   if (!currentQuestion) {
     return <div>Carregando...</div>;
   }
