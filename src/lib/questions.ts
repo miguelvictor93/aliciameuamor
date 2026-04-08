@@ -9,13 +9,6 @@ export const questions: QuizQuestion[] = [
     correct: "Cinderela"
   },
   {
-    princess: "Ariel",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/en/0/07/The_Little_Mermaid_%281989_film%29_poster.jpg",
-    question: "Qual princesa é uma sereia apaixonada pelo mundo dos humanos?",
-    options: ["Moana", "Ariel", "Rapunzel", "Tiana"],
-    correct: "Ariel"
-  },
-  {
     princess: "Bela",
     imageUrl: "https://preview.redd.it/to-me-belle-is-the-prettiest-disney-princess-v0-av307gktktme1.jpeg?width=640&crop=smart&auto=webp&s=b7bf3a1d623cd08d51576f4e104736125fe42fc4",
     question: "Qual princesa é conhecida por seu amor pelos livros e se tornou amiga de uma fera?",
@@ -30,45 +23,10 @@ export const questions: QuizQuestion[] = [
     correct: "Jasmine"
   },
   {
-    princess: "Rapunzel",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/en/b/bf/Tangled_poster.jpg",
-    question: "Qual princesa ficou presa em uma torre com seus longos cabelos mágicos?",
-    options: ["Bela Adormecida", "Cinderela", "Rapunzel", "Ariel"],
-    correct: "Rapunzel"
-  },
-  {
-    princess: "Moana",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/en/4/4e/Moana_%282016_film%29_poster.jpg",
-    question: "Qual princesa navega pelo oceano para salvar sua ilha e seu povo?",
-    options: ["Pocahontas", "Moana", "Ariel", "Mérida"],
-    correct: "Moana"
-  },
-  {
-    princess: "Elsa",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/en/0/05/Frozen_%282013_film%29_poster.jpg",
-    question: "Qual rainha tem poderes de gelo e criou o famoso personagem Olaf?",
-    options: ["Anna", "Elsa", "Rapunzel", "Branca de Neve"],
-    correct: "Elsa"
-  },
-  {
-    princess: "Tiana",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/en/7/7e/The_Princess_and_the_Frog_poster.jpg",
-    question: "Qual princesa sonha em abrir seu próprio restaurante e vira um sapo por um beijo?",
-    options: ["Jasmine", "Pocahontas", "Tiana", "Mulan"],
-    correct: "Tiana"
-  },
-  {
     princess: "Mérida",
     imageUrl: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZ_WhnLiqBO_UTOVyWmh247N5_TdyzjbZ9iJzM0AxVF5xi5HnOqVSq7st_MEL0wUkH4fE8XF-0Pi2rc1D8RQbDG7oCjeAD7y9uN0cxzOfIlAYnsnauqEDmSJ7x4JKyq_qEWQSamFxPt1g/s1600/Brave-brave-31209519-1035-822.jpg",
     question: "Qual princesa escocesa é habilidosa com arco e flecha e transforma sua mãe em ursa?",
     options: ["Mérida", "Mulan", "Pocahontas", "Bela"],
     correct: "Mérida"
-  },
-  {
-    princess: "Branca de Neve",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/en/5/5f/Snow_White_1937_poster.jpg",
-    question: "Qual foi a primeira princesa da Disney, que morava com sete anões?",
-    options: ["Cinderela", "Aurora", "Branca de Neve", "Bela"],
-    correct: "Branca de Neve"
   }
 ];
